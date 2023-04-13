@@ -1,0 +1,10 @@
+W10 -- Windows 10 and Windows Server 2016/2019/2022 Directory\nВ
+W63X64DESK -- Windows 8.1 amd 64 and Windows Server 2012 R2 Desctop Edition\nВ
+W63X64CORE -- Windows Server 2012 R2 amd64 Core Edition\nВ
+W61X64DESK -- Windows 7 amd64 and Windows Server 2008 R2 Desctop Edition\nВ
+W61X64CORE -- Windows Server 2008 R2 amd64 Core Edition\nВ
+README.md -- Readme File\nВ
+FEATURES.md -- Features of the Scripts\nВ
+.gitignore -- git ignore file ans extensions\nВ
+WHATSNEWS.md -- News of the project\nВ
+LICENSE.md -- Лицензионное соглашение для пакета\n-- License for project and its parts\nВ
