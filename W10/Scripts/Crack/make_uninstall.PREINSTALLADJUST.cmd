@@ -19,11 +19,22 @@ set PREINSTALLDIR=C:\.BIN\PREINSTALLADJUST
 set PREPWSH=%PREINSTALLDIR%\BIN\InitialAdjust\pwsh
 set WPWSHEXE=%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe
 set SMBUNINSTALLSCRIPT=smbshare-unmount0.ps1
+set DOTBIN=C:\.BIN
+
+rem Set Files...
+rem
+set CMDFILE001=%DOTBIN%\open.smbshare.LNKDIR.cmd
+set CMDFILE002=%DOTBIN%\OpenExplorerThisAsAdmin.cmd
+set CMDFILE003=%DOTBIN%\OpenTerminalThisAsAdmin.cmd
+set CMDFILE004=%DOTBIN%\PREINSTALLADJUST.install.cmd
+set CMDFILE005=C:\open.dotBIN.dir.cmd
+set CMDFILE006=%DOTBIN%\open.TestsFolder.cmd
 
 echo Check Integrity...
 rem
 if not exist %WPWSHEXE% echo %WPWSHEXE% is not found && exit /b 1
 if not exist %PREINSTALLDIR% echo %PREINSTALLDIR% is not found && exit /b 1
+if not exist %DOTBIN% echo %DOTBIN% is not found && exit /b 1
 
 rem
 echo Download and Run Payloads...
@@ -67,7 +78,13 @@ rmdir >nul 2>nul /S /Q %PREINSTALLDIR%
 
 echo Delete auxiliary Files and Directories...
 rem
+if exist %CMDFILE001% del /F /Q %CMDFILE001% 
+if exist %CMDFILE002% del /F /Q %CMDFILE002% 
+if exist %CMDFILE003% del /F /Q %CMDFILE003% 
+if exist %CMDFILE004% del /F /Q %CMDFILE004% 
+if exist %CMDFILE005% del /F /Q %CMDFILE005% 
+if exist %CMDFILE006% del /F /Q %CMDFILE006% 
 
 :End
-The Successful End of the Script %0
+echo The Successful End of the Script %0
 exit /b 0
