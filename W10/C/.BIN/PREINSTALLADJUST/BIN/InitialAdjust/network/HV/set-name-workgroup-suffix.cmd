@@ -8,7 +8,7 @@ rem *******************************************************
 @echo off
 
 rem Define Local Variables (must be changed)
-set main_dns_suffix=
+set main_dns_suffix=yudenisov.internal
 set newcomputername=W2K22-HV
 set newworkgroup=WORKGROUP
 
