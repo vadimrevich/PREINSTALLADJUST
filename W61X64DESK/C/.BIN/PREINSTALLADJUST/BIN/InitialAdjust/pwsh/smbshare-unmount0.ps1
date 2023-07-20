@@ -44,7 +44,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 # Your script here
 
 $SMBSHARE="smbshare"
-$WINSMBSHARE0="smbshare0"
+$WINSMBSHARE0="smbshare"
 
 ### Check System Conditions
 #

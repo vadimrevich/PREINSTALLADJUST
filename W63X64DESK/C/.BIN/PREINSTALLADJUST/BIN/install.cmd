@@ -41,6 +41,7 @@ rem
 set WPOSHEXE=%SystemRoot%\System32\WindowsPowershell\v1.0\powershell.exe
 set WSCRIPTEXE=%SystemRoot%\System32\wscript.exe
 
+set ACMD00=copy.bitsadmin.bat
 set ACMD01=dism.enable-feature.netfx.cmd
 set ACMD02=dism.enable-feature.powershell.cmd
 set ACMD03=AllowPoShScriptsGlobal.cmd
@@ -51,9 +52,10 @@ echo Check Integrity...
 rem
 if not exist %CMDSPATH% echo "%CMDSPATH% not Exist" && exit /b 1
 if not exist %PWSHSPATH% echo "%PWSHSPATH% not Exist" && exit /b 1
-rem if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
+if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
 if not exist %WSCRIPTEXE% echo "%WSCRIPTEXE% not Exist" && exit /b 1
 if not exist %COMSPEC% echo "%COMSPEC% not Exist" && exit /b 1
+if not exist %CMDSPATH%\%ACMD00% echo "%CMDSPATH%\%ACMD00% not Exist" && exit /b 2
 if not exist %CMDSPATH%\%ACMD01% echo "%CMDSPATH%\%ACMD01% not Exist" && exit /b 2
 if not exist %CMDSPATH%\%ACMD02% echo "%CMDSPATH%\%ACMD02% not Exist" && exit /b 2
 if not exist %CMDSPATH%\%ACMD03% echo "%CMDSPATH%\%ACMD03% not Exist" && exit /b 2
@@ -95,10 +97,11 @@ echo Run as Admin...
 echo Download and Run Payload..
 rem
 
+rem call %CMDSPATH%\%ACMD00%
 call %CMDSPATH%\%ACMD01%
 call %CMDSPATH%\%ACMD02%
-call %CMDSPATH%\%ACMD03%
 if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
+call %CMDSPATH%\%ACMD03%
 %WPOSHEXE% -NoProfile -ExecutionPolicy Bypass -File %PWSHSPATH%\%APWSH04%
 %WPOSHEXE% -NoProfile -ExecutionPolicy Bypass -File %PWSHSPATH%\%APWSH05%
 

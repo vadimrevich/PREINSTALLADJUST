@@ -1,5 +1,10 @@
 # Whats News
 
+#### Version 1.0.0.2
+
+- Fix Some Errors
+- Add Network Settings for Virtual Machines
+
 #### Version 1.0.0.1
 
 - Create Test Integrity Checking

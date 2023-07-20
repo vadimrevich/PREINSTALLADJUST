@@ -18,7 +18,7 @@ SetLocal EnableExtensions EnableDelayedExpansion
 rem Metadata
 
 set PRODUCT_NAME=InitialAdjust
-set REDACT=W2K8R2CORE
+set REDACT=W2K12R2CORE
 set FIRM=NIT
 
 rem set TPDL variable

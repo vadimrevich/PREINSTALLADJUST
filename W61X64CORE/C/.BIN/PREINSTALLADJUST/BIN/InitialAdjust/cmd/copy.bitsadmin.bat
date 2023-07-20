@@ -95,7 +95,7 @@ rem
 echo Run Payloads...
 
 
-copy /B /V /-Y %~dp0%AFILE% %pathCMD%
+rem copy /B /V /-Y %~dp0%AFILE% %pathCMD%
 
 rem End Payloads
 

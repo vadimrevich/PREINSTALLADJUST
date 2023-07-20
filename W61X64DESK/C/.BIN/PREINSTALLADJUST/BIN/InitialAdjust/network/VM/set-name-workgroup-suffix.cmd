@@ -9,7 +9,7 @@ rem *******************************************************
 
 rem Define Local Variables (must be changed)
 set main_dns_suffix=yudenisov.internal
-set newcomputername=W2K8R2-VM
+set newcomputername=W2K8-VM
 set newworkgroup=WORKGROUP
 
 rem Define Local Variables (must not be changed)

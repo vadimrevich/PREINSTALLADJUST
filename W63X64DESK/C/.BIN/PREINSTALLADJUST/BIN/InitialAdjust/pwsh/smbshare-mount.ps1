@@ -47,7 +47,7 @@ $SMBSHARE="smbshare"
 $WINUNC="WIN.netip4.ru"
 $WINUSER="WIN\MSSQLSR"
 $WINPASS="Admin01234"
-$WINSMBSHARE0="smbshare0"
+$WINSMBSHARE0="smbshare"
 
 ### Check System Conditions
 #
@@ -65,7 +65,7 @@ if( $isAdmin ){
 &net.exe USE /PERSISTENT:No
 ## &cmdkey.exe /ADD:$WINUNC /USER:$WINUSER /PASS:$WINPASS
 &net.exe USE X: \\$WINUNC\$SMBSHARE $WINPASS /USER:$WINUSER
-&xcopy.exe x:\*.* C:\.BIN\$SMBSHARE\ /S /E /V
+&xcopy.exe x:\*.* C:\.BIN\$SMBSHARE\ /S /E /v /Y /r /h /z
 &net.exe USE X: /DELETE
 ##&net.exe SHARE smbshare0=C:\.BIN\smbshare /UNLIMITED /REMARK:"Smb Share for Config"
 New-SmbShare -Name $WINSMBSHARE0 -Path C:\.BIN\$SMBSHARE -FullAccess *S-1-1-0 -Description "Smb Share for Config"

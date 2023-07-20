@@ -67,7 +67,7 @@ echo The End Checking Integrity
 title Installing Packages
 ::-------------------------------------
 REM  --> CheckING for permissions
->nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+net session >nul 2>&1
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
@@ -95,10 +95,10 @@ echo Run as Admin...
 echo Download and Run Payload..
 rem
 
-call %CMDSPATH%\%ACMD01%
+rem call %CMDSPATH%\%ACMD01%
 call %CMDSPATH%\%ACMD02%
-call %CMDSPATH%\%ACMD03%
 if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
+call %CMDSPATH%\%ACMD03%
 %WPOSHEXE% -NoProfile -ExecutionPolicy Bypass -File %PWSHSPATH%\%APWSH04%
 %WPOSHEXE% -NoProfile -ExecutionPolicy Bypass -File %PWSHSPATH%\%APWSH05%
 

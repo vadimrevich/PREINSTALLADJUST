@@ -1,7 +1,7 @@
 @echo on
 rem *******************************************************
 rem dism.enable-feature.netfx.cmd
-rem This Script Enables all NetFx Featueres at Windows Server
+rem This Script Enables all NetFx Features at Windows Server
 rem 2022 Datacenter Edition
 rem
 rem RETURNS:	0 if Success

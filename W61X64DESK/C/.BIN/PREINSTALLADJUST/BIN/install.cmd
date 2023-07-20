@@ -22,7 +22,7 @@ SetLocal EnableExtensions EnableDelayedExpansion
 rem Metadata
 
 set PRODUCT_NAME=InitialAdjust
-set REDACT=W2K8R2CORE
+set REDACT=W2K8R2DESK
 set FIRM=NIT
 
 rem set TPDL variable
@@ -51,7 +51,7 @@ echo Check Integrity...
 rem
 if not exist %CMDSPATH% echo "%CMDSPATH% not Exist" && exit /b 1
 if not exist %PWSHSPATH% echo "%PWSHSPATH% not Exist" && exit /b 1
-if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
+rem if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
 if not exist %WSCRIPTEXE% echo "%WSCRIPTEXE% not Exist" && exit /b 1
 if not exist %COMSPEC% echo "%COMSPEC% not Exist" && exit /b 1
 rem if not exist %CMDSPATH%\%ACMD01% echo "%CMDSPATH%\%ACMD01% not Exist" && exit /b 2
@@ -97,6 +97,7 @@ rem
 
 rem call %CMDSPATH%\%ACMD01%
 call %CMDSPATH%\%ACMD02%
+if not exist %WPOSHEXE% echo "%WPOSHEXE% not Exist" && exit /b 1
 call %CMDSPATH%\%ACMD03%
 %WPOSHEXE% -NoProfile -ExecutionPolicy Bypass -File %PWSHSPATH%\%APWSH04%
 %WPOSHEXE% -NoProfile -ExecutionPolicy Bypass -File %PWSHSPATH%\%APWSH05%

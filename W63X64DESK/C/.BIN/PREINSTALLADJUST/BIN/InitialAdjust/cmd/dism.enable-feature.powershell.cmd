@@ -2,7 +2,7 @@
 rem *******************************************************
 rem dism.enable-feature.powershell.cmd
 rem This Script Enables all Powershell Features at Windows Server
-rem 2012 R2 Core via Dism.exe Command.
+rem 2012 R2 Desktop via Dism.exe Command.
 rem
 rem RETURNS:	0 if Success
 rem		1 if Check Integrity Folder Error
