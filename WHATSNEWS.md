@@ -1,5 +1,9 @@
 # Whats News
 
+#### Version 1.0.0.3
+
+- Add Small Improvements
+
 #### Version 1.0.0.2
 
 - Fix Some Errors
