@@ -1,5 +1,9 @@
 # Whats News
 
+#### Version 1.1.0.0
+
+- First Commercial Release
+
 #### Version 1.0.0.3
 
 - Add Small Improvements
